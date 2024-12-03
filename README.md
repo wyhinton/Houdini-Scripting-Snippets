@@ -191,6 +191,26 @@ node = hou.pwd(); attribName=node.parm("attrib_name").eval();geo = node.geometry
 node = hou.pwd(); attribName=node.parm("attrib_name").eval();geo = node.geometry();values = geo.pointFloatAttribValues(attribName);node.parm("max").set(max(values))
 ```
 
+### Disable When
+# Disable a parm based on a toggle parms value
+```python
+{ rad_use_timeline == 1 }
+```
+
+Other disable when operations
+So you could do { parma == "" parmb == "" } this would mean they both need to be true in order to work an (and) operation. Or if { parma == "" } { parmb == "" } would be an (or) operation. You can also do ==, !=, <, >, >=, <=, =~ (matches pattern), !~ (doesn’t match pattern) as additional operations. What is a actually quite common is to make a parameter that is invisible (or under a hidewhen under an advanced set of options) that you can use to hide and disable parameter and folder menus.
+
+
+### Add Geo selector for parm action button
+```python
+import soputils
+kwargs['geometrytype'] = kwargs['node'].parmTuple('grouptype')
+kwargs['inputindex'] = 0
+kwargs['ordered'] = kwargs['node'].parm('ordered').eval()
+soputils.selectGroupParm(kwargs)
+```
+
+
 ### Write callbacks in HDA Python Module
 1. Go to type properties > Scripts > Select "Python Module" for event handler
 2. Write the code
