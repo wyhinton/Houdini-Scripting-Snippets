@@ -52,6 +52,7 @@ kwargs["node"].setColor(hou.Color((1, 0.725, 0)))
 kwargs["node"].setUserData('nodeshape', 'circle')
 ```
 
+
 ### All Custom Shapes Options
 
 ```python
@@ -202,13 +203,15 @@ So you could do { parma == "" parmb == "" } this would mean they both need to be
 
 
 ### Add Geo selector for parm action button
+![image](https://github.com/user-attachments/assets/257fcf41-ab2f-4c84-9099-bd844cf4ef3d)
+Point
 ```python
 import soputils
-kwargs['geometrytype'] = kwargs['node'].parmTuple('grouptype')
+kwargs['geometrytype'] = (hou.geometryType.Points,)
 kwargs['inputindex'] = 0
-kwargs['ordered'] = kwargs['node'].parm('ordered').eval()
 soputils.selectGroupParm(kwargs)
 ```
+
 
 
 ### Write callbacks in HDA Python Module
