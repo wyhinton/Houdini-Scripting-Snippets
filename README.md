@@ -210,6 +210,7 @@ import soputils
 kwargs['geometrytype'] = (hou.geometryType.Points,)
 kwargs['inputindex'] = 0
 soputils.selectGroupParm(kwargs)
+# for the select icon use BUTTONS_reselect in the Action Icon input
 ```
 
 
