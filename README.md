@@ -2,7 +2,7 @@
 ### Common Links
 [All Houdini Environment Variables](https://www.sidefx.com/docs/houdini/ref/env.html)
 [HScript Reference](https://www.sidefx.com/docs/houdini/expressions/index.html)
-
+[Adding Images to Help Cards](https://www.orbolt.com/news/80/adding-images-help-cards)
 
 
 ### Get the type of a node
