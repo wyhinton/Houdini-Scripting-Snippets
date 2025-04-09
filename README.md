@@ -65,10 +65,12 @@ def name_changed(node, event_type, **kwargs):
 
 hou.node("/obj/geo1").addEventCallback((hou.nodeEventType.NameChanged, ), name_changed)
 
-# types of events: ["BeingDeleted", "NameChanged", "FlagChanged", "AppearanceChanged", "PositionChanged", "InputRewired", "InputDataChanged", "ParmTupleChanged", "ParmTupleAnimated", "ParmTupleChannelChanged", "ParmTupleLockChanged",
-"ParmTupleEnabledChanged", "ParmTupleVisibleChanged", "ChildCreated", "ChildDeleted", "ChildSwitched", "ChildSelectionChanged", "NetworkBoxCreated", "NetworkBoxChanged", "NetworkBoxDeleted",
- "StickyNoteCreated", "StickyNoteChanged", "StickyNoteDeleted", "IndirectInputCreated", "IndirectInputRewired", "IndirectInputDeleted",
- "SpareParmTemplatesChanged", "SelectionChanged", "CustomDataChanged", "WorkItemSelectionChanged"]
+# types of events: ["BeingDeleted", "NameChanged", "FlagChanged", "AppearanceChanged", "PositionChanged",
+"InputRewired", "InputDataChanged", "ParmTupleChanged", "ParmTupleAnimated", "ParmTupleChannelChanged", "ParmTupleLockChanged",
+"ParmTupleEnabledChanged", "ParmTupleVisibleChanged", "ChildCreated", "ChildDeleted", "ChildSwitched",
+"ChildSelectionChanged", "NetworkBoxCreated", "NetworkBoxChanged", "NetworkBoxDeleted", "StickyNoteCreated",
+"StickyNoteChanged", "StickyNoteDeleted", "IndirectInputCreated", "IndirectInputRewired", "IndirectInputDeleted",
+"SpareParmTemplatesChanged", "SelectionChanged", "CustomDataChanged", "WorkItemSelectionChanged"]
 
 ```
 
