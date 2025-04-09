@@ -58,6 +58,17 @@ kwargs["node"].setUserData('nodeshape', 'circle')
 ```python
 'rect', 'bone', 'bulge', 'bulge_down', 'burst', 'camera', 'chevron_down', 'chevron_up', 'cigar', 'circle', 'clipped_left', 'clipped_right', 'cloud', 'diamond', 'ensign', 'gurgle', 'light', 'null', 'oval', 'peanut', 'pointy', 'slash', 'squared', 'star', 'tabbed_left', 'tabbed_right', 'tilted', 'trapezoid_down', 'trapezoid_up', 'wave'
 ```
+### Add Node Vent Callback
+```python
+def name_changed(node, event_type, **kwargs):
+    print("The geometry object is now named", node.name())
+
+hou.node("/obj/geo1").addEventCallback((hou.nodeEventType.NameChanged, ), name_changed)
+
+# types of events: ["BeingDeleted", "NameChanged", "FlagChanged", "AppearanceChanged", "PositionChanged", "InputRewired", "InputDataChanged", "ParmTupleChanged", "ParmTupleAnimated", "ParmTupleChannelChanged", "ParmTupleLockChanged", "ParmTupleEnabledChanged", "ParmTupleVisibleChanged", "ChildCreated", "ChildDeleted", "ChildSwitched", "ChildSelectionChanged", "NetworkBoxCreated", "NetworkBoxChanged", "NetworkBoxDeleted", "StickyNoteCreated", "StickyNoteChanged", "StickyNoteDeleted", "IndirectInputCreated", "IndirectInputRewired", "IndirectInputDeleted", "SpareParmTemplatesChanged", "SelectionChanged", "CustomDataChanged", "WorkItemSelectionChanged"]
+
+```
+
 
 ###
 
