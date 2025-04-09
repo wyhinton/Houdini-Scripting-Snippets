@@ -48,7 +48,7 @@ hou.ui.openTypePropertiesDialog(selected)
 Set a custom shape for a node in the OnCreated Script
 
 ```python
-kwargs["node"].setColor(hou.Color((1, 0.725, 0)))
+kwargs["node"].setColor(hou.Color((1, 0.725, 0))) 
 kwargs["node"].setUserData('nodeshape', 'circle')
 ```
 
@@ -58,7 +58,7 @@ kwargs["node"].setUserData('nodeshape', 'circle')
 ```python
 'rect', 'bone', 'bulge', 'bulge_down', 'burst', 'camera', 'chevron_down', 'chevron_up', 'cigar', 'circle', 'clipped_left', 'clipped_right', 'cloud', 'diamond', 'ensign', 'gurgle', 'light', 'null', 'oval', 'peanut', 'pointy', 'slash', 'squared', 'star', 'tabbed_left', 'tabbed_right', 'tilted', 'trapezoid_down', 'trapezoid_up', 'wave'
 ```
-### Add Node Vent Callback
+### Add Node Event Callback
 ```python
 def name_changed(node, event_type, **kwargs):
     print("The geometry object is now named", node.name())
